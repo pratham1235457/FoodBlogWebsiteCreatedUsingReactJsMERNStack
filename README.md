@@ -1,19 +1,60 @@
-# React + Vite
+# 🍳 FlavorFleet - MERN Stack Food Blog App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack web application built for food enthusiasts to discover, share, and review delicious recipes from around the world. Built using the modern MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
-Currently, two official plugins are available:
+![Project Banner](https://img.shields.io/badge/Status-Active-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+##  Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **User Authentication:** Secure registration and login using JSON Web Tokens (JWT) and encrypted passwords.
+- **Recipe Management:** Create, read, update, and delete (CRUD) food recipes complete with ingredients, step-by-step instructions, and images.
+- **Interactive Comments & Ratings:** Users can leave feedback, rate recipes, and engage with other food creators.
+- **Search & Filter:** Easily find recipes by category, ingredients, or title.
+- **Responsive Design:** Fully responsive layout optimized for mobile, tablet, and desktop devices.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the Oxlint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**Client (Frontend):**
+- React.js
+- React Router
+- Axios
+- Tailwind CSS / CSS Modules
+
+**Server (Backend):**
+- Node.js
+- Express.js
+- Mongoose (ODM)
+
+**Database:**
+- MongoDB / MongoDB Atlas
+
+---
+
+## 📁 Project Structure
+
+```text
+food-blog-app/
+│
+├── client/                 # React frontend application
+│   ├── public/
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Page views (Home, RecipeDetails, CreateRecipe, etc.)
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+│
+├── server/                 # Express backend application
+│   ├── controllers/        # Route logic
+│   ├── models/             # Mongoose schemas (User, Recipe, Comment)
+│   ├── routes/             # API endpoints
+│   ├── middleware/         # Auth & error-handling middleware
+│   ├── server.js           # Entry point
+│   └── package.json
+│
+└── .github/
+    └── workflows/          # CI/CD pipelines
